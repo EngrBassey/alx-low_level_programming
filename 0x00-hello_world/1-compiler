@@ -1,2 +1,2 @@
 #!/bin/bash
-export CFILE=CFILE.o;
+gcc -S $CFILE
