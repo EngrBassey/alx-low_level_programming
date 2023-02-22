@@ -8,12 +8,13 @@
 
 int main(void)
 {
-	int i, a, b, c;
+	int i;
+	long int a, b, c;
 
 	a = 1;
 	b = 2;
 
-	printf("%d, %d, ", a, b);
+	printf("%ld, %ld, ", a, b);
 	for (i = 1; i < 50; i++)
 	{
 		c  = a + b;
@@ -21,11 +22,11 @@ int main(void)
 		b = c;
 	if (i != 49)
 	{
-		printf("%d, ", c);
+		printf("%ld, ", c);
 	}
 	else
 	{
-		printf("%d\n", c);
+		printf("%ld\n", c);
 	}
 	}
 
