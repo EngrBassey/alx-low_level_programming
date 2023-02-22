@@ -13,7 +13,7 @@ int main(void)
 	a = 1;
 	b = 2;
 
-	printf("%d,%d,", a, b);
+	printf("%d,%d, ", a, b);
 	for (i = 2; i < 50; i++)
 	{
 		c  = a + b;
