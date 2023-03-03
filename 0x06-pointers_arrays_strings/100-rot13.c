@@ -1,7 +1,7 @@
 #include "main.h"
 
 /**
- * rot - Entry point
+ * rot13 - Entry point
  * @enc: pointer
  * Return: return enc
  */
