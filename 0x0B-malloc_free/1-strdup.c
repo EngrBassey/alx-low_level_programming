@@ -13,8 +13,8 @@ char *_strdup(char *str)
 	int sizeLen, i;
 
 	char *ptr;
-	
-	if(str == NULL)
+
+	if (str == NULL)
 		return (NULL);
 
 	for (sizeLen = 0; str[sizeLen] != '\0'; sizeLen++)
