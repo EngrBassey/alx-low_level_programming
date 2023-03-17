@@ -2,21 +2,6 @@
 #include <stdlib.h>
 
 /**
-  * len - functiont that prints length  of a string
-  * @str: string
-  * Return: return i
-  */
-
-int len(char *str) /**lenght of the string function*/
-{
-	int i;
-
-	for (i = 0; str[i] != '\0'; i++)
-		;
-	return (i);
-}
-
-/**
   * string_nconcat - function that concatinate string with malloc memory
   * @s1: first string
   * @s2: second string
@@ -26,12 +11,14 @@ int len(char *str) /**lenght of the string function*/
 
 char *string_nconcat(char *s1, char *s2, unsigned int n)
 {
-	unsigned int lent1, lent2, i = 0, j = 0;
+	unsigned int lent1 = 0, lent2 = 0, i = 0, j = 0;
 
 	char *s;
 
-	lent1 = len(s1);
-	lent2 = len(s2);
+	while (s1 && s1[lent1])
+		lent1++;
+	while (s2 && s2[lent2])
+		lent2++;
 
 	if (n < lent2)
 	{
