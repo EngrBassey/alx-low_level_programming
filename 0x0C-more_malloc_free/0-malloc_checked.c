@@ -4,6 +4,7 @@
 /**
   * malloc_checked - function allocate malloc memory
   * @b: varible to allocate memory to
+  * Return - return ptr
   */
 
 void *malloc_checked(unsigned int b)
