@@ -44,9 +44,11 @@ char *string_nconcat(char *s1, char *s2, unsigned int n)
 	if (s == NULL)
 		return (NULL);
 
-	for (; i < lent1; i++)
+	while (i < lent1)
 	{
 		s[i] = s1[i];
+
+	i++;
 	}
 
 	while (n < lent2 && i < (lent1 + n))
