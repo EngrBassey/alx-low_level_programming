@@ -63,8 +63,8 @@ dog_t *new_dog(char *name, float age, char *owner)
 	lent1 = _strlen(name);
 	lent2 = _strlen(owner);
 
-	dogPtr->name = malloc(sizeof(lent1 + 1));
-	dogPtr->owner = malloc(sizeof(lent2 + 1));
+	dogPtr->name = malloc(sizeof(char) * (lent1 + 1));
+	dogPtr->owner = malloc(sizeof(char) * (lent2 + 1));
 
 	if (dogPtr->name == NULL || dogPtr->owner == NULL)
 	{
