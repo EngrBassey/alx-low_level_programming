@@ -23,11 +23,11 @@ void print_strings(const char *separator, const unsigned int n, ...)
 		airport = va_arg(list, char*);
 
 		if (airport == NULL)
-			printf("nil");
+			printf("(nil)");
 		else
 			printf("%s", airport);
 
-		if (i != (n -1) && separator == NULL)
+		if (i != (n -1) && separator !== NULL)
 		{
 			printf("%s", separator);
 		}
