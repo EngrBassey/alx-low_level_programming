@@ -6,9 +6,9 @@
  * Return: return i
  */
 
-int _strlen(char *str)
+unsigned int _strlen(char *str)
 {
-	int i;
+	unsigned int i;
 
 	for (i = 0; str[i] != '\0'; i++)
 		;
@@ -26,6 +26,9 @@ int _strlen(char *str)
 list_t *add_node_end(list_t **head, const char *str)
 {
 	list_t *newNode, *tmp;
+	
+	if (str == null)
+		return (NULL);
 
 	newNode = malloc(sizeof(list_t));
 
@@ -34,6 +37,11 @@ list_t *add_node_end(list_t **head, const char *str)
 		return (NULL);
 	}
 	newNode->str = strdup(str);
+	if (new-> == NULL)
+	{
+		free(new);
+		return (NULL);
+	}
 	newNode->len = _strlen(newNode->str);
 	newNode->next = NULL;
 
