@@ -25,7 +25,7 @@ listint_t *find_listint_loop(listint_t *head)
 		}
 	}
 
-	if (prev != NULL || forward != NULL || forward->next != NULL)
+	if (!prev || !forward || !forward->next)
 	{
 		return (NULL);
 	}
