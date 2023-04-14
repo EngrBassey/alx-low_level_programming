@@ -33,7 +33,7 @@ void to_close(int fun_close)
 
 	if (cls == -1)
 	{
-	dprintf(STDERR_FILENO, "Error: Can't close fd FD_VALUE %d\n", cls);
+	dprintf(STDERR_FILENO, "Error: Can't close fd %d\n", cls);
 	exit(100);
 	}
 
@@ -60,13 +60,13 @@ int main(int argc, char *argv[])
 
 	file_from = open(argv[1], O_RDONLY);
 
-	file_to = open(argv[2], O_WRONLY | O_CREAT | O_TRUNC, 0664);
+	file_to = open(argv[2], O_CREAT | O_WRONLY | O_TRUNC, 0664);
 
 	rwt_byt = read(file_from, buffer, 1024);
 	if ((rwt_byt == -1) | (file_from == -1))
 	{
-		exit(98);
 		dprintf(STDERR_FILENO, "Error: Can't read from file %s\n", argv[1]);
+		exit(98);
 	}
 
 
@@ -75,7 +75,8 @@ int main(int argc, char *argv[])
 		wrt_byt = write(file_to, buffer, rwt_byt);
 		if ((file_to == -1) | (wrt_byt == -1))
 		{
-			dprintf(STDERR_FILENO, "Error: Can't write from file %s\n", argv[2]);
+			dprintf(STDERR_FILENO, "Error: Can't write to %s\n", argv[2]);
+			exit(99);
 		}
 
 		rwt_byt = read(file_from, buffer, 1024);
