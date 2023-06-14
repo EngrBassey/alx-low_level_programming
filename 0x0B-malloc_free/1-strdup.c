@@ -8,28 +8,24 @@
   */
 char *_strdup(char *str)
 {
-	static char *dup;
-	char *offset;
-	int length = _strlen(str);
+	char *dup;
+	int i;
+	int lenght = _strlen(str);
 
 	if (str == NULL)
 	{
 		return (NULL);
 	}
-	dup = (char *)malloc((sizeof(char) * length + 1));
-
+	dup = (char *)malloc((sizeof(char) * lenght) + 1);
 	if (dup == NULL)
 	{
 		return (NULL);
 	}
-	offset = dup;
-	while (*str)
+	for (i = 0; i < lenght; i++)
 	{
-		*offset = *str;
-		offset++;
-		str++;
+		dup[i] = str[i];
 	}
-	*offset = '\0';
+	dup[lenght] = '\0';
 
 	return (dup);
 }
