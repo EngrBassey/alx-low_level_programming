@@ -13,11 +13,26 @@ char *str_concat(char *s1, char *s2)
 {
 	char *ptr;
 	int i, j;
-	int lent1, lent2, lent;
+	int lent1 = 0, lent2 = 0, lent;
 
-	lent1 = _strlen(s1);
-	lent2 = _strlen(s2);
-
+	if (s1 != NULL)
+	{
+		i = 0;
+		while (s1[i] != '\0')
+		{
+			lent1++;
+			i++;
+		}
+	}
+	if (s2 != NULL)
+	{
+		i = 0;
+		while (s2[i] != '\0')
+		{
+			lent2++;
+			i++;
+		}
+	}
 	lent = lent1 + lent2;
 	ptr = (char *)malloc(sizeof(char) * (lent + 1));
 	if (ptr == NULL)
@@ -36,18 +51,4 @@ char *str_concat(char *s1, char *s2)
 
 	ptr[lent] = '\0';
 	return (ptr);
-}
-
-/**
-  * _strlen - function that get string length
-  * @str: string
-  * Return: return i
-  */
-int _strlen(char *str)
-{
-	int i;
-
-	for (i = 0; str[i] != '\0'; i++)
-		;
-	return (i);
 }
