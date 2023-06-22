@@ -1,14 +1,12 @@
 #include "3-calc.h"
-#include <string.h>
-
 /**
-  * main - functiont that takes in 3 arguments
+  * main - function that takes in 3 arguments
   * @argv: argument variable
   * @argc: argument count
   * Return: return 0
   */
 
-int main(int argc, char **argv)
+int main(int __attribute__((__unused__)) argc, char **argv)
 {
 	int num1, num2;
 	char *op;
