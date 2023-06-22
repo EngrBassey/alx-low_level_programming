@@ -8,7 +8,6 @@
   * Return: return 0
   */
 
-
 int main(int argc, char **argv)
 {
 	int byt, i;
@@ -17,7 +16,7 @@ int main(int argc, char **argv)
 
 	if (argc != 2)
 	{
-		printf("Error");
+		printf("Error\n");
 		exit(1);
 	}
 
@@ -25,7 +24,7 @@ int main(int argc, char **argv)
 
 	if (byt < 0)
 	{
-		printf("Error");
+		printf("Error\n");
 		exit(2);
 	}
 
