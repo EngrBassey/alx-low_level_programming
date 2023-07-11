@@ -2,17 +2,17 @@
 
 /**
   * main - program that copies the content of a file to another file
-  * @ac: the arguments count
+  * @argc: the arguments count
   * @argv: arguments variable
   * Return: return 0
   */
 
-int main(int ac, char **argv)
+int main(int argc, char **argv)
 {
 	int from, fil_to, r, w;
 	char *buf;
 
-	if (ac != 3)
+	if (argc != 3)
 	{
 		dprintf(STDERR_FILENO, "cp file_from file_to\n");
 		exit(97);
