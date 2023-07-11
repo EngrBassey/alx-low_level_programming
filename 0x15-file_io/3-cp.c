@@ -32,7 +32,7 @@ int main(int ac, char **argv)
 			exit(98);
 		}
 		w = write(fil_to, buf, r);
-		if (w == -1 || fil_to == -1)
+		if (fil_to == -1 || w == -1)
 		{
 			dprintf(STDERR_FILENO, "Error: Can't write to %s\n", argv[2]);
 			exit(99);
