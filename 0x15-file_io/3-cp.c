@@ -34,7 +34,7 @@ int main(int ac, char **argv)
 		w = write(fil_to, buf, r);
 		if (w == -1 || fil_to == -1)
 		{
-			dprintf(STDERR_FILENO, "Error:     Can't write to %s\n", argv[2]);
+			dprintf(STDERR_FILENO, "Error: Can't write to %s\n", argv[2]);
 			exit(99);
 		}
 		r = read(from, buf, 1024);
@@ -61,7 +61,7 @@ void _close(int file)
 
 	if (i == -1)
 	{
-		dprintf(STDERR_FILENO, "Error: Can't close fd %d", file);
+		dprintf(STDERR_FILENO, "Error: Can't close fd %d\n", file);
 		exit(100);
 	}
 }
@@ -79,7 +79,7 @@ char *_malloc(char *n)
 	ptr = malloc(sizeof(char) * 1024);
 	if (ptr == NULL)
 	{
-		dprintf(STDERR_FILENO, "Error: Can't write to %s", n);
+		dprintf(STDERR_FILENO, "Error: Can't write to %s\n", n);
 		exit(99);
 	}
 
